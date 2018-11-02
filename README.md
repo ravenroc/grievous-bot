@@ -1,4 +1,4 @@
-# easy-peasy-bot
+# grievous-bot - a fork of easy-peasy-bot
 
 ## The story of a (Slack)bot
 
