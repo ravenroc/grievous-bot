@@ -81,14 +81,13 @@ controller.on('rtm_close', function (bot) {
  */
 // BEGIN EDITING HERE!
 
-controller.on('bot_channel_join', function (bot, message) {
-    bot.reply(message, "I'm here!")
-});
+// controller.on('bot_channel_join', function (bot, message) {
+//     bot.reply(message, "I'm here!")
+// });
 
-controller.hears('hello', 'direct_message', function (bot, message) {
-    bot.reply(message, 'Hello!');
+controller.hears(['hello there'], ['ambient','mention','direct_message'], function (bot, message) {
+    bot.reply(message, 'General Kenobi... https://media.giphy.com/media/8JTFsZmnTR1Rs1JFVP/giphy-downsized.gif');
 });
-
 
 /**
  * AN example of what could be:
