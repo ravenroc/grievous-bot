@@ -80,14 +80,41 @@ controller.on('rtm_close', function (bot) {
  * Core bot logic goes here!
  */
 // BEGIN EDITING HERE!
+controller.on('bot_channel_join', function (bot, message) {
+    bot.reply(message, "http://gph.is/1EmEJru")
+});
 
-// controller.on('bot_channel_join', function (bot, message) {
-//     bot.reply(message, "I'm here!")
-// });
+controller.on('user_channel_join', function (bot, message) {
+    bot.reply(message, "Greetings.\nhttps://gph.is/2yMUr04")
+});
 
 controller.hears(['hello there'], ['ambient','mention','direct_message'], function (bot, message) {
-    bot.reply(message, 'General Kenobi... https://media.giphy.com/media/8JTFsZmnTR1Rs1JFVP/giphy-downsized.gif');
+    bot.reply(message, "General Kenobi...\nhttps://media.giphy.com/media/8JTFsZmnTR1Rs1JFVP/giphy-downsized.gif");
 });
+
+controller.hears(['ship it'], ['ambient','mention','direct_message'], function (bot, message) {
+    bot.reply(message, "https://media.giphy.com/media/5InOJpWtlFiBhdxPdZ/giphy-downsized.gif");
+});
+
+controller.hears(['on fire'],['ambient','mention','direct_message'], function (bot, message) {
+    bot.reply(message, "https://media.giphy.com/media/3o7abDbFe14HR4YQnu/giphy.gif");
+});
+
+controller.hears(['good job','good work'],['ambient'], function (bot, message) {
+    bot.reply(message, "Your skills are impressive. Perhaps a match for my own...");
+});
+
+controller.hears(['anakin','luke','skywalker','obi','obiwan','kenobi','jedi'], ['ambient','mention','direct_message'], function (bot, message) {
+    bot.reply(message, "https://media.giphy.com/media/kAUgtSozkruPC/giphy-downsized.gif");
+});
+
+
+
+/*
+--- bugs: "Crush them. Make them suffer."
+--- "Your lightsabers will make a fine addition to my collection."
+--- i got this: "Back away. I will deal with this Jedi slime myself."
+*/
 
 /**
  * AN example of what could be:
